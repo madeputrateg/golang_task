@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Teepee Marketplace</title>
+<link rel="stylesheet" href="/static/style.css">
+</head>
+
+<body>
+
+<h1>Teepee Marketplace</h1>
+
+<section class="card">
+<h2>Shop List</h2>
+<button id="loadShop">Load Shops</button>
+<div id="shopContainer"></div>
+</section>
+
+
+<section class="card">
+<h2>Add Product</h2>
+
+<form id="addProduct">
+
+<input id="name" placeholder="Product name" required>
+
+<input id="price" type="number" placeholder="Price" required>
+
+<input id="stock" type="number" placeholder="Stock" required>
+
+<select id="available" required>
+
+    <option value="">
+        Select Availability
+    </option>
+
+    <option value="available">
+        Available
+    </option>
+
+    <option value="not_available">
+        Not Available
+    </option>
+
+</select>
+
+<input id="shopId" placeholder="Shop ID" required>
+
+<button>Add Product</button>
+
+</form>
+
+</section>
+
+<section class="card">
+
+<h2>Add Shop</h2>
+
+
+<form id="addShop">
+
+
+<input 
+    id="shopName"
+    placeholder="Shop name"
+    required
+>
+
+
+<input 
+    id="shopLocation"
+    placeholder="Location"
+    required
+>
+
+
+<button>
+    Add Shop
+</button>
+
+
+</form>
+
+
+</section>
+
+
+<script src="/static/app.js"></script>
+
+</body>
+</html>
