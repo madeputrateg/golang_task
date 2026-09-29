@@ -1,6 +1,7 @@
 package main
 
 import (
+	"fmt"
 	"log"
 
 	"github.com/Teepee/internal/config"
@@ -59,7 +60,7 @@ func main() {
 	webController := web.InitializedWebController()
 	webController.InitializedRoute(server)
 
-	if err := server.Start("0.0.0.0:1323"); err != nil {
+	if err := server.Start(fmt.Sprintf("0.0.0.0:%s", config.ServerPort)); err != nil {
 		server.Logger.Error("failed to start server", "error", err)
 	}
 }
